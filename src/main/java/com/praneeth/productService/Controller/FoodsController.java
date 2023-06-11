@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 public class FoodsController {
 
     @Autowired
     private FoodsService  foodsService;
+
+
     @PostMapping("/add")
 //    @ResponseStatus(HttpStatus.ACCEPTED)
     public void addFoodItem(@RequestBody FoodItem foodItem){
