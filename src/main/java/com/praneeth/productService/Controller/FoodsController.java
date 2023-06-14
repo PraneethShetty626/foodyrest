@@ -17,6 +17,12 @@ public class FoodsController {
     private FoodsService  foodsService;
 
 
+    @GetMapping("/test")
+    public String getTest(){
+        return "Test result";
+
+    }
+
     @PostMapping("/add")
 //    @ResponseStatus(HttpStatus.ACCEPTED)
     public void addFoodItem(@RequestBody FoodItem foodItem){
@@ -25,6 +31,11 @@ public class FoodsController {
 
     @GetMapping("/getAllFoods")
     public List<FoodItem> getAllFoodItems(){
+        return foodsService.getAllFoodItem();
+    }
+
+    @GetMapping("/getAllFoodsSetting")
+    public List<FoodItem> getAllFoodItemsSetting(){
         return foodsService.getAllFoodItem();
     }
 
