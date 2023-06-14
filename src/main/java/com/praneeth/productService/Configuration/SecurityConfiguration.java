@@ -67,7 +67,9 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain ( HttpSecurity httpSecurity ) throws Exception {
-        httpSecurity.csrf ( AbstractHttpConfigurer::disable ).authorizeHttpRequests( auth ->
+        httpSecurity.csrf ( AbstractHttpConfigurer::disable ).
+                cors ( Customizer.withDefaults () )
+                . authorizeHttpRequests( auth ->
                         auth.requestMatchers("/auth","/order","/getAllFoods").permitAll()
                 ).authorizeHttpRequests( auth ->
                 auth.requestMatchers("/**").authenticated ()

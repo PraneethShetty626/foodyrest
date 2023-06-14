@@ -10,6 +10,7 @@ com\praneeth\productService\Model\OrderFoodItem.class
 com\praneeth\productService\Controller\OrderController.class
 com\praneeth\productService\Model\AuthRequest.class
 com\praneeth\productService\Model\UserDetailsLoader.class
+com\praneeth\productService\WebConfig$1.class
 com\praneeth\productService\Controller\FoodsController.class
 com\praneeth\productService\Filter\JwtAuthFilter.class
 com\praneeth\productService\Model\Orders.class
